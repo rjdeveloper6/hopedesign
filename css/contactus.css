@@ -1,0 +1,89 @@
+/* Contact Us Section */
+.contact-us {
+  background-color: #f1f1f1; /* Light background matching theme */
+  padding-top: 3rem;
+}
+
+.contact-us h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color); /* Primary theme color */
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.contact-us .contact-link {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-us .contact-link:hover {
+  color: #005f73; /* Darken on hover */
+}
+
+.qr-codes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr-code-img {
+  width: 220px; /* Increased size */
+  height: 220px; /* Increased size */
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for QR images */
+  transition: transform 0.3s ease;
+}
+
+.qr-code-img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.fw-bold {
+  font-weight: 600;
+}
+
+.contact-us .row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contact-us .col-md-4 {
+  padding: 15px;
+}
+
+.contact-us .text-theme {
+  color: var(--primary-color); /* Applying theme color to headings */
+}
+
+.contact-us a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.social-links a {
+  margin: 0 15px;
+}
+
+.social-icon {
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Slight zoom effect on social icons */
+}
+
+@media (max-width: 768px) {
+  .contact-us .row {
+    display: block;
+  }
+  .contact-us .col-md-4 {
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,26 @@
+/* Hero Section */
+.hero-section {
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 50px 0;
+  color: var(--primary-dark);
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+}

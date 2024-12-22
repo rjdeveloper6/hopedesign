@@ -1,0 +1,220 @@
+/* Color Variables */
+:root {
+  --primary-color: #005f73; /* Light blue */
+  --primary-dark: #003844; /* Darker blue for hover */
+  --text-color: #ffffff; /* White text */
+  --gray-color: #6c757d; /* Gray for muted text */
+}
+
+/* General Reset */
+body,
+ul,
+li,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: var(--text-color);
+  background-color: #f4f4f9;
+}
+
+/* Navbar Styles */
+.navbar-nav {
+  align-items: center;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-nav.flex-column {
+  gap: 10px;
+}
+
+.custom-navbar {
+  background-color: var(--primary-color);
+  padding: 0 20px; /* Adds padding for spacing */
+}
+
+.custom-navbar .navbar-nav {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.nav-link {
+  color: var(--text-color);
+  padding: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255,255,255,0.7)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-color);
+  padding: 10px 15px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-items .nav-link {
+  color: var(--text-color);
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 4px;
+}
+
+.nav-items .nav-link:hover {
+  background-color: var(--primary-dark);
+  color: var(--text-color);
+}
+
+.nav-items .nav-link.active {
+  background-color: var(--primary-dark);
+  color: var(--text-color);
+  border-radius: 4px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar-collapse {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    margin-right: 40px; /* Space between logo and nav items */
+  }
+
+  .navbar-collapse {
+    justify-content: center;
+  }
+
+  .navbar-nav {
+    gap: 20px; /* Adds spacing between nav items */
+  }
+}
+
+/* Footer Styles */
+.custom-footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding-top: 40px;
+  padding-bottom: 40px; /* Increased padding for more spacing */
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Increased gap between the items */
+  margin-bottom: 20px;
+}
+
+.footer-nav li {
+  display: inline-block;
+}
+
+.footer-nav a {
+  color: var(--text-color);
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 4px;
+}
+
+.footer-nav a:hover {
+  background-color: var(--primary-dark);
+  color: var(--text-color);
+}
+
+.footer-nav a.active {
+  background-color: var(--primary-dark);
+  color: var(--text-color);
+  border-radius: 4px;
+}
+
+.custom-footer p {
+  color: var(--text-color);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.footer-links a img {
+  width: 40px; /* Increased icon size */
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.footer-links a:hover img {
+  transform: scale(1.2);
+}
+
+/* Responsive Adjustments for Footer */
+@media (max-width: 991px) {
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}

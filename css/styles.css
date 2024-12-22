@@ -1,0 +1,476 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #005f73; /* Navigation bar background color */
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* Logo and Company Name in the Header */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 60px; /* Adjust size as needed */
+  height: auto;
+  cursor: pointer;
+  margin-right: 10px; /* Space between logo and company name */
+}
+
+.logo-container h1 {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Navigation Bar */
+header nav {
+  flex: 1;
+  text-align: center; /* Center the nav items */
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+}
+
+header nav li {
+  margin: 0 15px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+header nav a:hover {
+  color: #ffb703;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #005f73; /* Match footer color with nav bar */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  justify-content: center;
+}
+
+footer nav li {
+  margin: 0 15px;
+}
+
+footer nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+footer nav a:hover {
+  color: #ffb703;
+}
+
+.footer-contact {
+  margin-top: 20px;
+}
+
+.footer-contact .social-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer-contact .social-links a {
+  margin: 0 10px;
+}
+
+.footer-contact .social-links .social-logo {
+  width: 30px;
+  height: auto;
+}
+
+.footer-contact .contact-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+footer p {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* Service Card Layout */
+.service-card-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap; /* Allows wrapping of cards */
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30%; /* Cards take up 30% of the width on larger screens */
+  min-height: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Service Card Image */
+.service-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Hover Effects for Service Card */
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:hover h3 {
+  color: #ffb703;
+}
+
+.service-card:hover p {
+  color: #555;
+}
+
+/* Card Layout */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  min-height: 300px; /* Set a minimum height */
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+}
+
+/* Blurred background logo for default state */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/images/company-logo.png") no-repeat center center;
+  background-size: cover;
+  filter: blur(10px);
+  z-index: -1;
+  opacity: 0.6; /* Keep it slightly visible */
+  transition: opacity 0.3s ease;
+}
+
+/* Centered Card Header */
+.card-header {
+  font-size: 18px;
+  font-weight: bold;
+  color: #005f73;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+/* Card Content */
+.card-content {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  color: #333;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  background-color: #ffb703; /* Change background color on hover */
+}
+
+/* On hover: show content and remove background blur */
+.card:hover .card-content {
+  opacity: 1;
+  max-height: 500px; /* Adjust this to fit your content */
+}
+
+.card:hover::before {
+  opacity: 0; /* Hide the background logo blur */
+}
+
+.card:hover .card-header {
+  color: white; /* Change the card title color on hover */
+}
+
+/* Why Choose Us Section */
+.features {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+
+.features h3 {
+  font-size: 28px;
+  color: #005f73;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features li {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.features li strong {
+  font-weight: bold;
+  color: #005f73;
+}
+
+/* Hover effect on list items */
+.features li:hover {
+  color: #005f73;
+  background-color: #e1f7f5;
+  padding-left: 10px;
+  transition: all 0.3s ease;
+}
+
+.features li:before {
+  content: "\2022";
+  color: #ffb703;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+/* Roadmap Section - Flag style */
+.roadmap {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.roadmap h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #005f73;
+}
+
+/* Flag-Style Timeline */
+.year-roadmap {
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 60px; /* Increased space to avoid overlapping with the vertical line */
+}
+
+.year-roadmap h3 {
+  font-size: 28px;
+  color: #333; /* Same color as other text */
+  margin-bottom: 10px;
+  position: absolute;
+  left: -60px; /* Adjusted to stay within the container */
+  top: 0;
+}
+
+.year-roadmap ul {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-left: 20px;
+}
+
+.year-roadmap li {
+  font-size: 16px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.year-roadmap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #005f73; /* Vertical line */
+  z-index: 0;
+}
+
+.year-roadmap.left {
+  margin-left: 0;
+  margin-right: 50%;
+}
+
+.year-roadmap.right {
+  margin-left: 50%;
+  margin-right: 0;
+  text-align: right;
+}
+
+/* Enhanced Hover Effects for Timeline */
+.year-roadmap:hover {
+  transform: translateY(-5px);
+  background-color: #e1f7f5;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.year-roadmap:hover::before {
+  height: 120%;
+}
+
+.year-roadmap h3 {
+  color: #005f73;
+}
+
+.year-roadmap li {
+  color: #005f73;
+  transition: color 0.3s ease;
+}
+
+.year-roadmap:hover li {
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-container {
+    margin-bottom: 10px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+  }
+
+  header nav li {
+    margin: 5px 0;
+  }
+
+  footer nav ul {
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+  }
+
+  footer nav li {
+    margin: 5px 0;
+  }
+
+  .footer-contact .social-links {
+    margin-bottom: 15px;
+  }
+
+  .footer-contact .contact-info p {
+    font-size: 12px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .roadmap {
+    padding: 10px;
+  }
+
+  .year-roadmap h3 {
+    font-size: 24px;
+  }
+
+  .year-roadmap li {
+    font-size: 14px;
+  }
+
+  .year-roadmap {
+    padding-left: 40px; /* Reduced padding for smaller screens */
+  }
+
+  .year-roadmap h3 {
+    left: -40px; /* Adjusted for smaller screens */
+  }
+
+  /* Service Card Layout for smaller screens */
+  .service-card-container {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    align-items: center;
+  }
+
+  .service-card {
+    width: 100%; /* Cards take up full width on smaller screens */
+    max-width: none; /* Remove max width */
+  }
+}
