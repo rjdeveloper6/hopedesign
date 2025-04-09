@@ -19,7 +19,7 @@
 }
 
 .contact-us .contact-link:hover {
-  color: #005f73; /* Darken on hover */
+  color: #7cc657; /* Darken on hover */
 }
 
 .qr-codes {
@@ -59,7 +59,7 @@
 }
 
 .contact-us .text-theme {
-  color: var(--primary-color); /* Applying theme color to headings */
+  color: var(--primary-dark); /* Applying theme color to headings */
 }
 
 .contact-us a {

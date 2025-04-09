@@ -1,9 +1,22 @@
 /* Color Variables */
 :root {
-  --primary-color: #005f73; /* Light blue */
-  --primary-dark: #003844; /* Darker blue for hover */
+  --primary-color: Black; /* Light blue */
+  --primary-dark: #7cc657; /* Darker blue for hover */
   --text-color: #ffffff; /* White text */
   --gray-color: #6c757d; /* Gray for muted text */
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  color: #ffffff; /* Default text color for all text elements */
+  text-decoration: none; /* Remove underline from links */
 }
 
 /* General Reset */
@@ -52,10 +65,6 @@ body {
   padding: 10px;
   font-size: 1rem;
   text-transform: uppercase;
-}
-
-.nav-link:hover {
-  color: var(--primary-color);
 }
 
 .navbar-toggler-icon {
@@ -113,6 +122,7 @@ body {
 @media (min-width: 992px) {
   .navbar-brand {
     margin-right: 40px; /* Space between logo and nav items */
+    color: var(--text-color);
   }
 
   .navbar-collapse {

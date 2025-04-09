@@ -3,14 +3,11 @@
   padding: 20px;
 }
 
-/* Styles for About Us Page */
-:root {
-  --history-bg-color: #f4f8f403; /* Light beige */
-}
+
 
 /* History Section */
 .history-section {
-  background-color: var(--history-bg-color);
+  background-color: var(--primary-color);
   color: var(--primary-dark);
   padding: 30px;
   border-radius: 10px;
@@ -127,6 +124,13 @@
     #ffffff,
     #f4f9ff
   ); /* Same as About Section */
+  color: var(--primary-color);
+}
+
+.roadmap-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
   color: var(--primary-dark);
 }
 
@@ -145,7 +149,7 @@
   content: "";
   position: absolute;
   width: 4px;
-  background-color: var(--primary-dark);
+  background-color: var(--primary-color);
   top: 0;
   bottom: 0;
   left: 50%;
@@ -173,7 +177,7 @@
 }
 
 .timeline-item h3 {
-  color: var(--primary-dark);
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 

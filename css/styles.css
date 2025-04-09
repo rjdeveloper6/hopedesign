@@ -10,7 +10,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #005f73; /* Navigation bar background color */
+  background-color: #7cc657; /* Navigation bar background color */
   color: white;
   padding: 10px 20px;
   position: relative;
@@ -66,7 +66,7 @@ header nav a:hover {
 
 /* Footer Styles */
 footer {
-  background-color: #005f73; /* Match footer color with nav bar */
+  background-color: #7cc657; /* Match footer color with nav bar */
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -212,7 +212,7 @@ footer p {
 .card-header {
   font-size: 18px;
   font-weight: bold;
-  color: #005f73;
+  color: #7cc657;
   text-transform: uppercase;
   margin-bottom: 20px;
   position: relative;
@@ -262,7 +262,7 @@ footer p {
 
 .features h3 {
   font-size: 28px;
-  color: #005f73;
+  color: #7cc657;
   margin-bottom: 20px;
   text-transform: uppercase;
   font-weight: bold;
@@ -283,12 +283,12 @@ footer p {
 
 .features li strong {
   font-weight: bold;
-  color: #005f73;
+  color: #7cc657;
 }
 
 /* Hover effect on list items */
 .features li:hover {
-  color: #005f73;
+  color: #7cc657;
   background-color: #e1f7f5;
   padding-left: 10px;
   transition: all 0.3s ease;
@@ -314,7 +314,7 @@ footer p {
 .roadmap h2 {
   text-align: center;
   font-size: 32px;
-  color: #005f73;
+  color: #7cc657;
 }
 
 /* Flag-Style Timeline */
@@ -352,7 +352,7 @@ footer p {
   top: 0;
   width: 4px;
   height: 100%;
-  background-color: #005f73; /* Vertical line */
+  background-color: #7cc657; /* Vertical line */
   z-index: 0;
 }
 
@@ -379,11 +379,11 @@ footer p {
 }
 
 .year-roadmap h3 {
-  color: #005f73;
+  color: #7cc657;
 }
 
 .year-roadmap li {
-  color: #005f73;
+  color: #7cc657;
   transition: color 0.3s ease;
 }
 
